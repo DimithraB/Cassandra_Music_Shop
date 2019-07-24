@@ -1,0 +1,27 @@
+body{
+	background-image:url('violinBackGroundImage.jpg');
+	background-repeat:no-repeat;
+	height:100%;
+	background-size:cover;
+}
+
+.words{
+	color:white;
+}
+.content{
+	background-color:black;
+	padding:10px;
+	opacity:.6;
+}
+.content h1{
+	text-align:center;
+	color:white;
+	font-family: 'Megrim', cursive;
+	font-size:100px;
+	opacity:.9;
+}
+.content h2{
+	color:white;
+	font-size:25px;
+	opacity:.9;
+}

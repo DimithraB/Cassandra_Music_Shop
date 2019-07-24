@@ -1,0 +1,9 @@
+What are the semantic tags? And versions they belongs to..
+
+// used to mention keywords, to increase the efficiency of the search engine.
+<meta name="keyword" content="music, musicShop">
+
+//css rules
+
+//theories (gasault and so on)
+

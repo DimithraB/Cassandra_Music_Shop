@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<</bo lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drum</title>
+    <script src="changeFontSize.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Quicksand&display=swap" rel="stylesheet">
+    <style>
+        .heading{
+            color: aliceblue;
+            text-align: center;
+            padding-top: 40px;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 42px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+            color: aliceblue;
+            padding-top: 40px;
+            float: right;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .leftGrid {
+            grid-column: 1;
+            grid-row: 1;
+
+        }
+        .rightGrid {
+            grid-column: 3;
+            grid-row: 1;
+        }
+        .midGrid {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .image{
+            padding-bottom: 50px;
+        }
+
+    </style>
+</head>
+<body id="size" style="background-image: url('back.jpeg'); background-size: 100%; font-size: 20px; ">
+<div>
+    <input type="image" src="increase.png" onclick="changeFontSize('size', 1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-in" title="Increase font size">
+    <input type="image" src="default.png" onclick="setDefault('size')" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; border: 1px #333333 solid;" title="set default font size">
+    <input type="image" src="decrease.png" onclick="changeFontSize('size', -1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-out" title="Decrease font size">
+</div>
+
+<div class="heading">
+    DRUM
+</div>
+<div class="container">
+    <div class="leftGrid">
+        <ul>
+            <li><p>A drum is a musical instrument which produces sound by the vibration of a stretched membrane.</p></li>
+            <li><p>Drums exist in a wide variety of shapes and sizes. The two basic shapes for shells are bowls and tubes. The most familiar bowlshaped drums in Western music are kettledrums, also known as timpani.</p></li>
+            <li><p>Until the late 1950s, the head of a drum was almost always made of animal skin. Modern heads are now almost always made of plastic. Usually some form of polyester is used. </p></li>
+            <li>Drums are used to keep a steady beat in a song. They give music of many kinds a sense of feeling. For example, to make a song to be slow or fast, the drums play slower or faster.</li>
+
+        </ul>
+    </div>
+    <div class="rightGrid">
+        <div id="main-item" class="main-item" style="float: none; width: 500px; height: 200px; align-items: center" >
+            <a href="Home.html" ><img src="offer.jpg" height="200" width="250" class="image"/></a>
+            <i>DON'T_MISS .. !!</i>
+        </div>
+        <div style="padding-top: 70px">
+            <iframe width="420" height="230" src="https://www.youtube.com/embed/et9hU7QMDYU">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="midGrid">
+        <div style="padding-top: 70px">
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

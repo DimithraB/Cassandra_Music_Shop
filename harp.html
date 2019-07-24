@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width,intial-scale=1.0">
+        <meta name="description" content="Cassandra">
+        <meta charset="UTF-8">
+        
+
+        <title>
+            Cassandra
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            
+            .harp{
+                background-image: url(harp1.jpg);
+                font-size:12px;
+                background-size: 100%;
+            }
+            #harp-cont{
+                padding:10px 40px 40px  ;
+                line-height:30px;
+                color:white;
+                float:right;
+                box-sizing:border-box;
+                width:50%;
+                right:30px;
+                text-align:justify;
+                box-shadow: 5px 5px 20px 10px rgb(36, 36, 36);
+                margin-top:50px;
+                margin-bottom:80px;
+                -webkit-animation: fadein 4s; 
+                animation: fadein 4s;
+            }
+            @keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            @-webkit-keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+
+            
+        </style>
+
+        
+        <script src="sidenav.js"></script>
+        <script src="changeFontSize.js" type="text/javascript"></script>
+    </head>
+    <body id="size" class ="harp">
+        
+            
+            <div id = "sideNav" class = "sidenav">
+                
+                <a style="text-align: center" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                <div class="nav-items">
+                        <a class="list" href="index.html" >Home</a>
+                        <a class="list" href="gallery.html" >Gallery</a>
+                        <a class="list" href="products.html" >Purchases</a>
+                        <a class="list" href="Home.html" >Quiz</a>
+                        <a class="list" href="aboutus.html" >About</a>
+                        <a class="list" href="sitemap.html" >Site Map</a> 
+                        <a class="list" href="feedback.html" >Feedback</a>
+                <img class="social" src="facebook.png">
+                <img class="social" src="instagram.png">
+                <img class="social" src="twitter.png">
+                <img class="social" src="snapchat.png">
+                </div>
+            </div>
+            
+                    
+            <header id="header">
+                    
+                <div id="header-items">
+                        <span class="menu-icon" style="cursor:pointer" onclick="openNav()">
+                                <div class="menu-bar" id="1"></div>
+                                <div class="menu-bar" id="2"></div>
+                                <div class="menu-bar" id="3"></div> 
+                            </span>   
+                <img class="logo" src="logo2.jpg">
+                    
+                   
+                </div>
+            </header>
+        
+            
+            <div id = "main">
+                    <br><br>
+                    <div>
+                        <input type="image" src="increase.png" onclick="changeFontSize('size', 1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-in" title="Increase font size">
+                        <input type="image" src="default.png" onclick="setDefault('size')" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; border: 1px #333333 solid;" title="set default font size">
+                        <input type="image" src="decrease.png" onclick="changeFontSize('size', -1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-out" title="Decrease font size">
+                    </div>
+                <div id="harp-cont" class="harp-cont">
+                        <h1>The Harp</h1>
+                        <p>
+                            The harp is a stringed musical instrument that has a number of individual strings running at an angle to its soundboard; the strings are plucked with the fingers. Harps have been known since antiquity in Asia, Africa and Europe, dating back at least as early as 3500 BC. </p>
+                        
+                
+                    <p>Harps vary globally in many ways. In terms of size, many smaller harps can be played on the lap, whereas larger harps are quite heavy and rest on the floor. Different harps may use strings of catgut, nylon, metal, or some combination. While all harps have a neck, resonator, and strings, frame harps have a pillar at their long end to support the strings, while open harps, such as arch harps and bow harps, do not. </p>
+                    </p>
+                </div>
+                        
+            </div>
+            
+    
+            <a href ="#top"><button class="top">Top</button></a>
+       
+            <footer id="footer" style="color:white; text-align:center">
+                    Copyrights &copy; | 2019 | All rights reserved to CASSANDRA
+               </footer> 
+        
+    </body>
+</html>

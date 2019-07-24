@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CASSANDRA | Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+</style>
+<script src="sidenav.js"></script>
+<script src="changeFontSize.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="gallery.css">
+<link rel="icon" type="image" size="50x50" href="play1.png">
+<link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="size" style="background-color:black">
+
+		<div id = "sideNav" class = "sidenav">
+            
+				<a style="text-align: center" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+				<div class="nav-items">
+						<a class="list" href="index.html" >Home</a>
+						<a class="list" href="gallery.html" >Gallery</a>
+						<a class="list" href="products.html" >Purchases</a>
+						<a class="list" href="Home.html" >Quiz</a>
+						<a class="list" href="aboutus.html" >About</a>
+						<a class="list" href="sitemap.html" >Site Map</a> 
+						<a class="list" href="feedback.html" >Feedback</a>
+				<img class="social" src="facebook.png">
+				<img class="social" src="instagram.png">
+				<img class="social" src="twitter.png">
+				<img class="social" src="snapchat.png">
+				</div>
+			</div>
+			
+					
+			<header id="header">
+					
+				<div id="header-items">
+						<span class="menu-icon" style="cursor:pointer" onclick="openNav()">
+								<div class="menu-bar" id="1"></div>
+								<div class="menu-bar" id="2"></div>
+								<div class="menu-bar" id="3"></div> 
+							</span>   
+				<img class="logo" src="logo2.jpg">
+					
+				   
+				</div>
+			</header>
+
+<div id="main">
+		
+		<div>
+			<input type="image" src="increase.png" onclick="changeFontSize('size', 1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-in" title="Increase font size">
+			<input type="image" src="default.png" onclick="setDefault('size')" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; border: 1px #333333 solid;" title="set default font size">
+			<input type="image" src="decrease.png" onclick="changeFontSize('size', -1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-out" title="Decrease font size">
+		</div>
+		<div class="grid-main">
+				<h1 style="color:white;">GALLERY</h1>
+				<div class="slideshow">
+					<div class="slides fade">
+						<img src="mick.jpg" title="Microphone" style="text-align:center;" width="560" height="480">
+					</div>	
+					<div class="slides fade">
+						<img src="drum.jpg" title="Drums" style="text-align:center;" width="560" height="480">
+					</div>
+					<div class="slides fade">
+						<img src="guitar1.jpeg" title="Guitars" style="text-align:center;" width="560" height="480">
+					</div>
+					<div class="slides fade">
+						<img src="mixer.jpg" title="Mixer" style="text-align:center;" width="560" height="480">
+					</div>
+					<div class="slides fade">
+						<img src="sac1.jpg" title="Saxophone" style="text-align:center;" width="560" height="480">
+					</div>
+					<div class="slides fade">
+						<img src="violin1.jpg" title="Violins" style="text-align:center;" width="560" height="480">
+					</div>
+				</div><br>
+				<div style="text-align:center;">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<script>
+				window.onload = function(){
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+				  var i;
+				  var slides = document.getElementsByClassName("slides");
+				  var dots = document.getElementsByClassName("dot");
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				  }
+				  slideIndex++;
+				  if (slideIndex > slides.length) {slideIndex = 1}    
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				  setTimeout(showSlides, 5000);
+				}
+				}
+				</script>
+				</div>
+				<br>
+				<div class="grid-container">
+		<div class="div1">
+		<img class="image" id="myImg1" alt="<p class='alt'>Microphone</p><br><p class='des'>*See for description located below all images*</p>" title="Microphone" src="mick.jpg" width="460" height="400"/>
+		<div id="myModal1" class="modal1">
+			<span class="close1">&times;</span>
+			<img class="modal-content1" id="img01">
+			<div id="caption1"></div>
+		</div>
+		<script>
+			var modal1 = document.getElementById("myModal1");
+			var modalImg1 = document.getElementById("img01");
+			var img1  = document.getElementById("myImg1");
+			var captionText1 = document.getElementById("caption1");
+			img1.onclick = function(){
+				modal1.style.display = "block";
+				modalImg1.src = this.src;
+				captionText1.innerHTML = this.alt;
+				captionText1.style.textAlign = "center";
+			}
+			var span1 = document.getElementsByClassName("close1")[0];
+			span1.onclick = function(){
+				modal1.style.display = "none";
+			}
+		</script>
+		<br><br>
+		<p class="p1">Microphone</p>
+		<img class="like1" src="like.PNG" width="60" height="60" onclick="like1()" />
+		<img class="dislike1" src="dislike.PNG" width="60" height="60" onclick="dislike1()" />
+		<br><br><br>
+		<p class="plike1" id="like1">0</p>
+		<p class="pdislike1" id="dislike1">0</p>
+		<script>
+		var lCount1 = 0;
+		var dCount1 = 0;
+		function like1(){
+			lCount1 +=1;
+			document.getElementById("like1").innerHTML = lCount1;
+		}
+		function dislike1(){
+			dCount1 +=1;
+			document.getElementById("dislike1").innerHTML = dCount1;
+		}
+		</script>
+	</div>
+	<div class="div1">
+		<img class="image" id="myImg2" alt="<p class='alt'>Drums</p><br><p class='des'>*See for description located below all images*</p>" title="Drums" src="drum.jpg" width="460" height="400"/>
+		<div id="myModal2" class="modal2">
+			<span class="close2">&times;</span>
+			<img class="modal-content2" id="img02">
+			<div id="caption2"></div>
+		</div>
+		<script>
+			var modal2 = document.getElementById("myModal2");
+			var modalImg2 = document.getElementById("img02");
+			var img2  = document.getElementById("myImg2");
+			var captionText2 = document.getElementById("caption2");
+			img2.onclick = function(){
+				modal2.style.display = "block";
+				modalImg2.src = this.src;
+				captionText2.innerHTML = this.alt;
+				captionText2.style.textAlign = "center";
+			}
+			var span2 = document.getElementsByClassName("close2")[0];
+			span2.onclick = function(){
+				modal2.style.display = "none";
+			}
+		</script>
+		<br><br>
+		<p class="p2">Drums</p>
+		<img class="like2" src="like.PNG" width="60" height="60" onclick="like2()"/>
+		<img class="dislike2" src="dislike.PNG" width="60" height="60" onclick="dislike2()"/>
+		<br><br><br>
+		<p class="plike2" id="like2">0</p>
+		<p class="pdislike2" id="dislike2">0</p>
+		<script>
+		var lCount2 = 0;
+		var dCount2 = 0;
+		function like2(){
+			lCount2 +=1;
+			document.getElementById("like2").innerHTML = lCount2;
+		}
+		function dislike2(){
+			dCount2 +=1;
+			document.getElementById("dislike2").innerHTML = dCount2;
+		}
+		</script>
+	</div>
+	<div class="div1">
+		<img class="image" id="myImg3" alt="<p class='alt'>Guitars</p><br><p class='des'>*See for description located below all images*</p>" title="Guitars" src="guitar1.jpeg" width="460" height="400"/>
+		<div id="myModal3" class="modal3">
+			<span class="close3">&times;</span>
+			<img class="modal-content3" id="img03">
+			<div id="caption3"></div>
+		</div>
+		<script>
+			var modal3 = document.getElementById("myModal3");
+			var modalImg3 = document.getElementById("img03");
+			var img3  = document.getElementById("myImg3");
+			var captionText3 = document.getElementById("caption3");
+			img3.onclick = function(){
+				modal3.style.display = "block";
+				modalImg3.src = this.src;
+				captionText3.innerHTML = this.alt;
+				captionText3.style.textAlign = "center";
+			}
+			var span3 = document.getElementsByClassName("close3")[0];
+			span3.onclick = function(){
+				modal3.style.display = "none";
+			}
+		</script>
+		<br><br>
+		<p class="p1">Guitars</p>
+		<img class="like1" src="like.PNG" width="60" height="60" onclick="like3()"/>
+		<img class="dislike1" src="dislike.PNG" width="60" height="60" onclick="dislike3()"//>
+		<br><br><br>
+		<p class="plike1" id="like3">0</p>
+		<p class="pdislike1" id="dislike3">0</p>
+		<script>
+		var lCount3 = 0;
+		var dCount3= 0;
+		function like3(){
+			lCount3 +=1;
+			document.getElementById("like3").innerHTML = lCount3;
+		}
+		function dislike3(){
+			dCount3 +=1;
+			document.getElementById("dislike3").innerHTML = dCount3;
+		}
+		</script>
+	</div>
+	<div class="div1">
+		<img class="image" id="myImg4" alt="<p class='alt'>Mixer</p><br><p class='des'>*See for description located below all images*</p>" title="Mixer" src="mixer.jpg" width="460" height="400"/>
+		<div id="myModal4" class="modal4">
+			<span class="close4">&times;</span>
+			<img class="modal-content4" id="img04">
+			<div id="caption4"></div>
+		</div>
+		<script>
+			var modal4 = document.getElementById("myModal4");
+			var modalImg4 = document.getElementById("img04");
+			var img04  = document.getElementById("myImg4");
+			var captionText4 = document.getElementById("caption4");
+			img04.onclick = function(){
+				modal4.style.display = "block";
+				modalImg4.src = this.src;
+				captionText4.innerHTML = this.alt;
+				captionText4.style.textAlign = "center";
+			}
+			var span4 = document.getElementsByClassName("close4")[0];
+			span4.onclick = function(){
+				modal4.style.display = "none";
+			}
+		</script>
+		<br><br>
+		<p class="p2">Mixer</p>
+		<img class="like2" src="like.PNG" width="60" height="60" onclick="like4()"/>
+		<img class="dislike2" src="dislike.PNG" width="60" height="60" onclick="dislike4()"/>
+		<br><br><br>
+		<p class="plike2" id="like4">0</p>
+		<p class="pdislike2" id="dislike4">0</p>
+		<script>
+		var lCount4 = 0;
+		var dCount4= 0;
+		function like4(){
+			lCount4 +=1;
+			document.getElementById("like4").innerHTML = lCount4;
+		}
+		function dislike4(){
+			dCount4 +=1;
+			document.getElementById("dislike4").innerHTML = dCount4;
+		}
+		</script>
+	</div>
+	<div class="div1">
+		<img class="image" id="myImg5" alt="<p class='alt'>Saxophone</p><br><p class='des'>*See for description located below all images*</p>" title="Saxophone" src="sac1.jpg" width="460" height="400"/>
+		<div id="myModal5" class="modal5">
+			<span class="close5">&times;</span>
+			<img class="modal-content5" id="img05">
+			<div id="caption5"></div>
+		</div>
+		<script>
+			var modal5 = document.getElementById("myModal5");
+			var modalImg5 = document.getElementById("img05");
+			var img05  = document.getElementById("myImg5");
+			var captionText5 = document.getElementById("caption5");
+			img05.onclick = function(){
+				modal5.style.display = "block";
+				modalImg5.src = this.src;
+				captionText5.innerHTML = this.alt;
+				captionText5.style.textAlign = "center";
+			}
+			var span5 = document.getElementsByClassName("close5")[0];
+			span5.onclick = function(){
+				modal5.style.display = "none";
+			}
+		</script>
+		<br><br>
+		<p class="p1">Saxophone</p>
+		<img class="like1" src="like.PNG" width="60" height="60" onclick="like5()"/>
+		<img class="dislike1" src="dislike.PNG" width="60" height="60" onclick="dislike5()"/>
+		<br><br><br>
+		<p class="plike1" id="like5">0</p>
+		<p class="pdislike1" id="dislike5">0</p>
+		<script>
+		var lCount5 = 0;
+		var dCount5= 0;
+		function like5(){
+			lCount5 +=1;
+			document.getElementById("like5").innerHTML = lCount5;
+		}
+		function dislike5(){
+			dCount5 +=1;
+			document.getElementById("dislike5").innerHTML = dCount5;
+		}
+		</script>
+	</div>
+	<div class="div1">
+		<img class="image" id="myImg6" alt="<p class='alt'>Violins</p><br><p class='des'>*See for description located below all images*</p>" title="Violins" src="violin1.jpg" width="460" height="400"/>
+		<div id="myModal6" class="modal6">
+			<span class="close6">&times;</span>
+			<img class="modal-content6" id="img06">
+			<div id="caption6"></div>
+		</div>
+		<script>
+			var modal6 = document.getElementById("myModal6");
+			var modalImg6 = document.getElementById("img06");
+			var img06  = document.getElementById("myImg6");
+			var captionText6 = document.getElementById("caption6");
+			img06.onclick = function(){
+				modal6.style.display = "block";
+				modalImg6.src = this.src;
+				captionText6.innerHTML = this.alt;
+				captionText6.style.textAlign = "center";
+			}
+			var span6 = document.getElementsByClassName("close6")[0];
+			span6.onclick = function(){
+				modal6.style.display = "none";
+			}
+		</script>
+		<br><br>
+		<p class="p2">Violins</p>
+		<img class="like2" src="like.PNG" width="60" height="60" onclick="like6()"/>
+		<img class="dislike2" src="dislike.PNG" width="60" height="60" onclick="dislike6()"/>
+		<br><br><br>
+		<p class="plike2" id="like6">0</p>
+		<p class="pdislike2" id="dislike6">0</p>
+		<script>
+		var lCount6 = 0;
+		var dCount6= 0;
+		function like6(){
+			lCount6 +=1;
+			document.getElementById("like6").innerHTML = lCount6;
+		}
+		function dislike6(){
+			dCount6 +=1;
+			document.getElementById("dislike6").innerHTML = dCount6;
+		}
+		</script>
+	</div>
+</div>
+				
+<br><br><br>
+<form name="f1" style="margin-left:100px;">
+<br>
+<p style="font-size:25px;font-weight:bold;color:white;font-family: 'Megrim', cursive;"><b>Select an image : </b></p>
+<div class="form">
+	<label onclick="validateForm1()" class="radio"><input type="radio" name="radiobtn" value="Microphone"/>Microphone</label>
+	<label onclick="validateForm2()" class="radio"><input type="radio" name="radiobtn" value="Drums"/>Drums</label>
+	<label onclick="validateForm3()" class="radio"><input type="radio" name="radiobtn" value="Guitars"/>Guitars</label>
+	<label onclick="validateForm4()" class="radio"><input type="radio" name="radiobtn" value="Mixer"/>Mixer</label>
+	<label onclick="validateForm5()" class="radio"><input type="radio" name="radiobtn" value="Saxophone"/>Saxophone</label>
+	<label onclick="validateForm6()" class="radio"><input type="radio" name="radiobtn" value="Violins"/>Violins</label>
+</div>
+<br>
+<p style="font-size:25px;font-weight:bold;color:white;font-family: 'Megrim', cursive;"><b>Description : </b></p>
+<textarea id="textarea" rows="5" cols="153" placeholder="Description goes here">
+</textarea>
+<script>
+	function validateForm1(){
+		document.getElementById("textarea").innerHTML = "A microphone is a device that captures audio by "+
+		"converting sound waves into an electrical signal.This signal can be amplified as an analog signal or may be converted to a digital signal,"+
+		"which can be processed by a computer or other digital audio device,"+
+		"they can capture audio in several different ways. Therefore, multiple classes of microphones exist.";
+	}
+	function validateForm2(){
+		document.getElementById("textarea").innerHTML = "Played by a single player, with drumsticks held in both hands, and the feet operating pedals that control the hi-hat cymbal and the"+
+		"beater for the bass drum. A drum kit consists of a mix of drums and idiophones – most significantly cymbals, but can also include the woodblock and cowbell."+ 
+		"Some kits also include electronic instruments. Also, both hybrid (mixing acoustic instruments and electronic drums) and entirely electronic kits are used.";
+	}
+	function validateForm3(){
+		document.getElementById("textarea").innerHTML = "Are fretted musical instruments that usually has six strings.They are typically "+ 
+		"played with both hands by strumming or plucking the strings with either a guitar pick or the finger(s)/fingernails of one hand, while simultaneously"+
+		"fretting with the fingers of the other hand. The sound of the vibrating strings is projected either acoustically, by means of the hollow chamber of the guitar,"+
+		"or through an electrical amplifier and a speaker.";
+	}
+	function validateForm4(){
+		document.getElementById("textarea").innerHTML = "Audio mixing is the process of combining multitrack recordings into a final mono, stereo or surround sound product."+
+		"In the process of combining the separate tracks, their relative levels (i.e volumes) are adjusted and balanced and various processes such as equalization and compression"+
+		"are commonly applied to individual tracks, groups of tracks, and the overall mix. In stereo and surround sound mixing, the placement of the tracks within the stereo "+
+		"(or surround) field are adjusted and balanced.";
+	}
+	function validateForm5(){
+		document.getElementById("textarea").innerHTML = "The saxophone is used in classical music (such as concert bands, chamber music, solo repertoire, and, occasionally, "+
+		"orchestras), military bands, marching bands, jazz (such as big bands and jazz combos), and contemporary music. The saxophone is also used as a solo and melody "+
+		"instrument or as a member of a horn section in some styles of rock and roll and popular music. Saxophone players are called saxophonists.";
+	}
+	function validateForm6(){
+		document.getElementById("textarea").innerHTML = "The violin, sometimes known as a fiddle, is a wooden string instrument in the violin family. Most violins have a "+
+		"hollow wooden body. It is the smallest and highest-pitched instrument in the family in regular use. Smaller violin-type instruments exist, including the violino "+
+		"piccolo and the kit violin, but these are virtually unused. The violin typically has four strings and is most commonly played by drawing a bow across its strings, "+
+		"though it can also be played by plucking the strings with the fingers and by striking the strings with the wooden side of the bow ."+
+		"Furthermore violins are important instruments in a wide variety of musical genres. ";
+	}
+</script>
+<br><br>
+</form>
+<br><br><br>
+<div class="grid-container-color">
+	<div class="colorChangeBack">
+		<button class="btn"><b>Change Color of Background</b></button>
+		<div class="content1" id="dropdown1">
+			<option value="gray" onclick="validate1()">Gray</option>
+			<option value="orange" onclick="validate2()">Orange</option>
+			<option value="green" onclick="validate3()">Green</option>
+			<option value="default" onclick="validate4()">Default</option>
+		</div>
+	</div>
+	<script>
+	function validate1(){
+		document.body.style.backgroundColor = "gray";
+	}
+	function validate2(){
+		document.body.style.backgroundColor = "orange";
+	}
+	function validate3(){
+		document.body.style.backgroundColor = "green";
+	}
+	function validate4(){
+		document.body.style.backgroundColor = "black";
+	}
+	</script>
+	<div class="colorChangeText">
+	<button class="btn"><b>Change Color of Text</b></button>
+		<div class="content2" id="dropdown2">
+			<option value="red" onclick="validate5()">Red</option>
+			<option value="blue" onclick="validate6()">Blue</option>
+			<option value="yellow" onclick="validate7()">Yellow</option>
+			<option value="default" onclick="validate8()">Default</option>
+		</div>
+	</div>
+	<script>
+	function validate5(){
+		document.body.style.color = "red";
+		document.getElementsByClassName("alt").style.color = "red"
+	}
+	function validate6(){
+		document.body.style.color = "blue";
+	}
+	function validate7(){
+		document.body.style.color = "yellow";
+	}
+	function validate8(){
+		document.body.style.color = "black";
+	}
+	</script>
+</div>
+				<br><br><br><br><br><br><br><br><br><br><br><br>
+				<div class="share">
+					<h2>Share this Gallery</h2>
+					<hr>
+					<a href="#" target="_blank" title="Facebook" class="fa fa-facebook-official"></a>
+					<a href="#" target="_blank" title="Twitter" class="fa fa-twitter"></a>
+					<a href="#" target="_blank" title="Skype" class="fa fa-skype"></a>
+					<a href="#" target="_blank" title="Google Plus" class="fa fa-google-plus"></a>
+					<a href="#" target="_blank" title="Email" class="fa fa-envelope"></a>
+				<script>
+				function changeColor(){
+					this.style.color = "#ffb3b3";
+					this.style.fontSize = "35px";
+				}
+				var text = document.getElementById("link");
+				text.onmouseover  = changeColor;
+				function changeColorOut(){
+					this.style.color = "yellow";
+					this.style.fontSize = "20px"
+				}
+				var text = document.getElementById("link");
+				text.onmouseout  = changeColorOut;
+				</script>
+				</div><br><br><br><br>
+				<button id="top" onclick="topFunction()">Back to Top</button>
+				<script>
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("top").style.display = "block";
+				  } else {
+					document.getElementById("top").style.display = "none";
+				  }
+				}
+
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+				</script>
+</div>
+<footer id="footer" style="color:white; text-align:center">
+		Copyrights &copy; | 2019 | All rights reserved to CASSANDRA<br>
+		Page done by : <a href="#" style="color:white;text-decoration:none;">Akshaan Bandara</a>
+   </footer> 
+</body>
+</html>

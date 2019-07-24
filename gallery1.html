@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CASSANDRA | Gallery</title>
+<link rel="stylesheet" type="text/css" href="gallery1.css">
+<link rel="icon" type="image" size="50x50" href="play1.png">
+<link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="grid-main">
+<h1><b><i>GALLERY</i></b></h1>
+<div class="slideshow">
+	<div class="slides fade">
+		<img src="imageNew1.jpeg" title="Microphone" style="text-align:center;" width="560" height="480">
+	</div>	
+	<div class="slides fade">
+		<img src="newImage.jpeg" title="Flute" style="text-align:center;" width="560" height="480">
+	</div>
+	<div class="slides fade">
+		<img src="mixer.jpeg" title="Mixer" style="text-align:center;" width="560" height="480">
+	</div>
+	<div class="slides fade">
+		<img src="drums.jpeg" title="Drums" style="text-align:center;" width="560" height="480">
+	</div>
+	<div class="slides fade">
+		<img src="guitar1.jpeg" title="Guitars" style="text-align:center;" width="560" height="480">
+	</div>
+	<div class="slides fade">
+		<img src="violin1.jpg" title="Violin" style="text-align:center;" width="560" height="480">
+	</div>
+</div><br>
+<div style="text-align:center;">
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span>
+</div>
+<script>
+window.onload = function(){
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000);
+}
+}
+</script>
+</div>
+<br><br><br><br><br>
+<div class="grid-container">
+    <div class="image">
+        <img id="cap1" class="scaleImg" src="imageNew1.jpeg" alt="Microphone" width="550" height="450"/>
+		<div class="enlarge" id="photo1">
+			<span class="close">&times;</span>
+			<img class="enlarge-content" id="img1" width="350" height="400">
+			<div id="caption1"></div>
+		</div>
+		<script>
+		var enlarge = document.getElementById('photo1');
+			var img = document.getElementById('cap1');
+			var enlargeImg = document.getElementById('img1');
+			var captionText = document.getElementById('caption1');
+			img.onclick = function(){
+				enlarge.style.display = 'block';
+				enlargeImg.src = this.src;
+				captionText.innerHTML = this.alt;
+			}
+			var span = document.getElementsByClassName('close')[0];
+			span.onclick = function(){
+				enlarge.style.display = 'none';
+			}
+		</script>
+		<b><p class="name1">Microphone</p></b>
+        <img class="imageSetA1" title="Like" onclick="likeA1()" src="Capture1.jpg" width="45.5" height="45.5"/>
+		<img class="imageSetA2" title="Dislike" onclick="dislikeA1()" src="Capture2.jpg" width="46.5" height="46.5"/>
+		<br><br><br>
+        <p id="valueLike1A" class="plike1">0</p>
+        <p id="valueDislike1A" class="pdislike1">0</p>
+        <script>
+		var countALike1 = 1;
+        var countADislike1 = 1;
+        function likeA1(){
+            document.getElementById("valueLike1A").innerHTML = countALike1;
+            countALike1=countALike1+1;
+        }
+		function dislikeA1(){
+            document.getElementById("valueDislike1A").innerHTML = countADislike1;
+	        countADislike1=countADislike1+1; 
+        }
+        </script> 		
+    </div>
+	<div class="image">
+        <img id="cap2" class="scaleImg" src="newImage.jpeg" alt="Flute" width="550" height="450"/>
+		<div class="enlarge" id="photo2">
+			<span class="close2">&times;</span>
+			<img class="enlarge-content" id="img2"  width="350" height="400">
+			<div id="caption2"></div>
+		</div>
+		<script>
+		var enlarge2 = document.getElementById('photo2');
+			var img2 = document.getElementById('cap2');
+			var enlargeImg2 = document.getElementById('img2');
+			var captionText2 = document.getElementById('caption2');
+			img2.onclick = function(){
+				enlarge2.style.display = 'block';
+				enlargeImg2.src = this.src;
+				captionText2.innerHTML = this.alt;
+			}
+			var span2 = document.getElementsByClassName('close2')[0];
+			span2.onclick = function(){
+				enlarge2.style.display = 'none';
+			}
+		</script>
+		<b><p class="name2">Flute</p></b>
+        <img class="imageSetB1" title="Like" onclick="likeA2()" src="Capture1.jpg" width="45.5" height="45.5"/>
+		<img class="imageSetB2" title="Dislike" onclick="dislikeA2()" src="Capture2.jpg" width="46.5" height="46.5"/>
+		<br><br><br>
+        <p id="valueLike2A" class="plike2">0</p>
+        <p id="valueDislike2A" class="pdislike2">0</p>
+        <script>
+		var countALike2 = 1;
+        var countADislike2 = 1;
+        function likeA2(){
+            document.getElementById("valueLike2A").innerHTML = countALike2;
+            countALike2=countALike2+1;
+        }
+		function dislikeA2(){
+            document.getElementById("valueDislike2A").innerHTML = countADislike2;
+	        countADislike2=countADislike2+1; 
+        }
+        </script> 
+    </div>
+	<div class="image">
+        <img id="cap3" class="scaleImg" src="mixer.jpeg" alt="Mixer" width="550" height="450"/>
+		<div class="enlarge" id="photo3">
+			<span class="close3">&times;</span>
+			<img class="enlarge-content" id="img3"  width="350" height="400">
+			<div id="caption3"></div>
+		</div>
+		<script>
+		var enlarge3 = document.getElementById('photo3');
+			var img3 = document.getElementById('cap3');
+			var enlargeImg3 = document.getElementById('img3');
+			var captionText3 = document.getElementById('caption3');
+			img3.onclick = function(){
+				enlarge3.style.display = 'block';
+				enlargeImg3.src = this.src;
+				captionText3.innerHTML = this.alt;
+			}
+			var span3 = document.getElementsByClassName('close3')[0];
+			span3.onclick = function(){
+				enlarge3.style.display = 'none';
+			}
+		</script>
+		<b><p class="name1">Mixer</p></b>
+        <img class="imageSetC1" title="Like" onclick="likeA3()" src="Capture1.jpg" width="45.5" height="45.5"/>
+		<img class="imageSetC2" title="Dislike" onclick="dislikeA3()" src="Capture2.jpg" width="46.5" height="46.5"/>
+		<br><br><br>
+        <p id="valueLike3B" class="plike3">0</p>
+        <p id="valueDislike3B" class="pdislike3">0</p>
+        <script>
+		var countALike3 = 1;
+        var countADislike3 = 1;
+        function likeA3(){
+            document.getElementById("valueLike3B").innerHTML = countALike3;
+            countALike3=countALike3+1;
+        }
+		function dislikeA3(){
+            document.getElementById("valueDislike3B").innerHTML = countADislike3;
+	        countADislike3=countADislike3+1; 
+        }
+        </script> 
+    </div>
+	<div class="image">
+        <img id="cap4" class="scaleImg" src="drums.jpeg" alt="Drums" width="550" height="450"/>
+		<div class="enlarge" id="photo4">
+			<span class="close4">&times;</span>
+			<img class="enlarge-content" id="img4"  width="350" height="400">
+			<div id="caption4"></div>
+		</div>
+		<script>
+		var enlarge4 = document.getElementById('photo4');
+			var img4 = document.getElementById('cap4');
+			var enlargeImg4 = document.getElementById('img4');
+			var captionText4 = document.getElementById('caption4');
+			img4.onclick = function(){
+				enlarge4.style.display = 'block';
+				enlargeImg4.src = this.src;
+				captionText4.innerHTML = this.alt;
+			}
+			var span4 = document.getElementsByClassName('close4')[0];
+			span4.onclick = function(){
+				enlarge4.style.display = 'none';
+			}
+		</script>
+		<b><p class="name2">Drums</p></b>
+        <img class="imageSetD1" title="Like" onclick="likeB1()" src="Capture1.jpg" width="45.5" height="45.5"/>
+		<img class="imageSetD2" title="Dislike" onclick="dislikeB1()" src="Capture2.jpg" width="46.5" height="46.5"/>
+		<br><br><br>
+        <p id="valueLike4B" class="plike4">0</p>
+        <p id="valueDislike4B" class="pdislike4">0</p>
+        <script>
+		var countBLike1 = 1;
+        var countBDislike1 = 1;
+        function likeB1(){
+            document.getElementById("valueLike4B").innerHTML = countBLike1;
+            countBLike1=countBLike1+1;
+        }
+		function dislikeB1(){
+            document.getElementById("valueDislike4B").innerHTML = countBDislike1;
+	        countBDislike1=countBDislike1+1; 
+        }
+        </script>  		
+    </div>
+	<div class="image">
+        <img id="cap5" class="scaleImg" src="guitar1.jpeg" alt="Guitars" width="550" height="450"/>
+		<div class="enlarge" id="photo5">
+			<span class="close5">&times;</span>
+			<img class="enlarge-content" id="img5"  width="350" height="400">
+			<div id="caption5"></div>
+		</div>
+		<script>
+		var enlarge5 = document.getElementById('photo5');
+			var img5 = document.getElementById('cap5');
+			var enlargeImg5 = document.getElementById('img5');
+			var captionText5 = document.getElementById('caption5');
+			img5.onclick = function(){
+				enlarge5.style.display = 'block';
+				enlargeImg5.src = this.src;
+				captionText5.innerHTML = this.alt;
+			}
+			var span5 = document.getElementsByClassName('close5')[0];
+			span5.onclick = function(){
+				enlarge5.style.display = 'none';
+			}
+		</script>
+		<b><p class="name1">Guitars</p></b>
+        <img class="imageSetE1" title="Like" onclick="likeB2()" src="Capture1.jpg" width="45.5" height="45.5"/>
+		<img class="imageSetE2" title="Dislike" onclick="dislikeB2()" src="Capture2.jpg" width="46.5" height="46.5"/>
+		<br><br><br>
+        <p id="valueLike5C" class="plike5">0</p>
+        <p id="valueDislike5C" class="pdislike5">0</p>
+        <script>
+		var countCLike1 = 1;
+        var countCDislike1 = 1;
+        function likeB2(){
+            document.getElementById("valueLike5C").innerHTML = countCLike1;
+            countCLike1=countCLike1+1;
+        }
+		function dislikeB2(){
+            document.getElementById("valueDislike5C").innerHTML = countCDislike1;
+	        countCDislike1=countCDislike1+1; 
+        }
+        </script> 		
+    </div>
+	<div class="image">
+        <img id="cap6" class="scaleImg" src="violin1.jpg" alt="Violin" width="550" height="450"/>
+		<div class="enlarge" id="photo6">
+			<span class="close6">&times;</span>
+			<img class="enlarge-content" id="img6"  width="350" height="400">
+			<div id="caption6"></div>
+		</div>
+		<script>
+		var enlarge6 = document.getElementById('photo6');
+			var img6 = document.getElementById('cap6');
+			var enlargeImg6 = document.getElementById('img6');
+			var captionText6 = document.getElementById('caption6');
+			img6.onclick = function(){
+				enlarge6.style.display = 'block';
+				enlargeImg6.src = this.src;
+				captionText6.innerHTML = this.alt;
+			}
+			var span6 = document.getElementsByClassName('close6')[0];
+			span6.onclick = function(){
+				enlarge6.style.display = 'none';
+			}
+		</script>
+		<b><p class="name2">Violin</p></b>
+        <img class="imageSetF1" title="Like" onclick="likeB3()" src="Capture1.jpg" width="45.5" height="45.5"/>
+		<img class="imageSetF2" title="Dislike" onclick="dislikeB3()" src="Capture2.jpg" width="46.5" height="46.5"/>
+		<br><br><br>
+        <p id="valueLike6C" class="plike6">0</p>
+        <p id="valueDislike6C" class="pdislike6">0</p>	
+		<script>
+		var countCike2 = 1;
+        var countCDislike2 = 1;
+        function likeB3(){
+            document.getElementById("valueLike6C").innerHTML = countCike2;
+            countCike2=countCike2+1;
+        }
+		function dislikeB3(){
+            document.getElementById("valueDislike6C").innerHTML = countCDislike2;
+	        countCDislike2=countCDislike2+1; 
+        }
+        </script> 
+    </div>
+</div>
+
+<br><br><br>
+<div class="formC1">
+<form name="f1">
+<b id="text1" style="color:black;">Select Color for background:</b>
+<select name="color" id="color" required>
+	<option value="pleaseSelect">Please Select</option>
+	<option value="orange">Orange</option>
+	<option value="gray">Gray</option>
+	<option value="green">Green</option>
+</select>
+<script>
+function validateList(){
+    var list = document.getElementById("color");
+    if (list.value =="pleaseSelect"){
+	    alert("Please select an option!");
+        return false;		
+	} else if (list.value =="orange"){
+	    document.body.style.backgroundColor = "Orange"; 
+	} else if (list.value =="gray"){
+	    document.body.style.backgroundColor = "gray"; 
+	}else{
+	    document.body.style.backgroundColor = "Green"; 
+	}
+}
+</script>
+<button type="button" class="btn" onclick="validateList()">Submit</button></form></div>
+<div class="formC2"
+<form name="f2">
+<b id="text2" style="color:black;">Select Color for text:</b>
+<select name="colorText" id="colorText" required>
+	<option value="pleaseSelect">Please Select</option>
+	<option value="red">Red</option>
+	<option value="yellow">Yellow</option>
+	<option value="blue">Blue</option>
+</select>
+<script>
+function validateListText(){
+    var listText = document.getElementById("colorText");
+    if (listText.value =="pleaseSelect"){
+	    alert("Please select an option!");
+        return false;		
+	} else if (listText.value =="red"){
+        document.body.style.color = "red";
+
+	} else if (listText.value =="yellow"){
+        document.body.style.color = "yellow";
+
+	}else{
+        document.body.style.color = "blue";
+	}
+}
+
+</script>
+<button type="button" class="btn" onclick="validateListText()">Submit</button></form></div>
+<br><br><br><br><br>
+<div name="formC3">
+<form name="f3">
+<button class="topbtn" onclick="top();">Top</button></form></div>
+<script>
+window.onscroll = function() {
+	scroll()
+};
+function scroll(){
+	if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
+		document.getElementsByClassName("topbtn").style.display = "block";
+	}else{
+		document.getElementsByClassName("topbtn").style.display = "none";
+	}
+}
+function top(){
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+</script>
+<br><br><br><br>
+<div class="grid-container1">
+<div id="share"><a id="link" href="#">Share this Gallery</a><br><hr>
+<a href="https://www.facebook.com/" title="Facebook" target="_blank" class="fa fa-facebook-official"></a>
+<a href="https://twitter.com/" title="Twitter" target="_blank" class="fa fa-twitter"></a>
+<a href="https://www.skype.com/en/" title="Skype" target="_blank" class="fa fa-skype"></a>
+<a href="https://aboutme.google.com/u/0/?referer=gplus" title="Google Plus" target="_blank" class="fa fa-google-plus"></a>
+</div>
+<script>
+function changeColor(){
+	this.style.color = "#ffb3b3";
+	this.style.fontSize = "35px";
+}
+var text = document.getElementById("link");
+text.onmouseover  = changeColor;
+function changeColorOut(){
+	this.style.color = "yellow";
+	this.style.fontSize = "20px"
+}
+var text = document.getElementById("link");
+text.onmouseout  = changeColorOut;
+</script>
+</div>
+</body>
+</html>

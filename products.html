@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width-device-width,intial-scale=1.0">
+        <meta name="description" content="Cassandra">
+        <meta charset="UTF-8">
+        
+    <title>cassandra - Products</title>
+    
+    <script src="sidenav.js"></script>
+    <script src="changeFontSize.js" type="text/javascript"></script>
+    <style>
+        .tab {
+            float: left;
+            
+            background-color: #00029d;
+            width: 15%;
+            height: 367px;
+            margin-left: auto;
+            opacity: 0.9;
+        }
+        .tab button {
+            display: block;
+            background-color: #00029d;
+            color: #fffff9;
+            padding: 16px 16px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+            color: #00029d;
+        }
+        .content {
+            float: left;
+            padding: 0 12px;
+            border: 1px solid #ccc;
+            width: 80%;
+            height: auto;
+            background-color: #fffff9;
+            opacity: 0.9;
+            border-radius: 0 15px 15px 0;
+        }
+        .contentFinal {
+            float: inherit;
+            padding: 0 12px;
+            border: 1px solid #ccc;
+            width: 100%;
+            height: auto;
+            background-color: #fffff9;
+            opacity: 0.9;
+            border-radius: 15px;
+        }
+        .product{
+            float: left;
+            background-color: white;
+            margin: 10px 10px 0 0;
+            border-radius: 10px;
+            width: auto;
+            height: auto;
+        }
+        .description{
+            text-align: center;
+            color: #333;
+            padding-top: 20px;
+            height: 120px;
+            position: relative;
+        }
+        .price{
+            color: blue;
+            position: absolute;
+            bottom: 20px; width: 234px;
+        }
+        .container{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .labelOrder {
+            margin: -92px 0 0 0;
+            padding-top: 12px;
+            width: 100%;
+            height: 480px;
+            background-color: darkblue;
+            float: right;
+            text-align: center;
+            font-weight: bold;
+            color: #fffff9;
+        }
+        #order {
+            height: 396px;
+            float: none;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #orderDescription {
+            margin: -40px 0 -5px 0;
+            height: 40px;
+        }
+        input[type=button], input[type=reset] {
+            float: right;
+            margin-right: 10px;
+        }
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .submit{
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .reset{
+            width: 100%;
+            background-color: #af2a2a;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=button]:hover {
+            background-color: #00029d;
+        }
+        .formStyle{
+            border-radius:0 0 10px 10px;
+            background-color: #333b40;
+            padding: 100px;
+            clear: both;
+            margin: auto;
+            color: #fffff9;
+            opacity: 0.95;
+            position:relative;
+        }
+		a{
+	color:white;
+	text-decoration:none;
+}
+
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  id="size" >
+    
+        
+        <div id = "sideNav" class = "sidenav">
+            
+            <a style="text-align: center" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            <div class="nav-items">
+                    <a class="list" href="index.html" >Home</a>
+                    <a class="list" href="gallery.html" >Gallery</a>
+                    <a class="list" href="products.html" >Purchases</a>
+                    <a class="list" href="Home.html" >Quiz</a>
+                    <a class="list" href="aboutus.html" >About</a>
+                    <a class="list" href="sitemap.html" >Site Map</a> 
+                    <a class="list" href="feedback.html" >Feedback</a>
+            <img class="social" src="facebook.png">
+            <img class="social" src="instagram.png">
+            <img class="social" src="twitter.png">
+            <img class="social" src="snapchat.png">
+            </div>
+        </div>
+        
+                
+        <header id="header">
+                
+            <div id="header-items">
+                    <span class="menu-icon" style="cursor:pointer" onclick="openNav()">
+                            <div class="menu-bar" id="1"></div>
+                            <div class="menu-bar" id="2"></div>
+                            <div class="menu-bar" id="3"></div> 
+                        </span>   
+            <img class="logo" src="logo2.jpg">
+                
+               
+            </div>
+        </header>
+    
+</head>
+
+<div id="main">
+
+
+    <!-- font size increase decrease -->
+<br><br>
+<div>
+    <input type="image" src="increase.png" onclick="changeFontSize('size', 1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-in" title="Increase font size">
+    <input type="image" src="default.png" onclick="setDefault('size')" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; border: 1px #333333 solid;" title="set default font size">
+    <input type="image" src="decrease.png" onclick="changeFontSize('size', -1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-out" title="Decrease font size">
+</div>
+
+<!--<div style="color: white ;text-align: center;font-size: 45px;margin: 40px 20px 80px 20px; font-family: Noteworthy;">--><h1><center>Products</center></h1>
+<hr color="#333b40" >
+
+<div class="container">
+<div style="width: 80%; float: left">
+    <div class="tab">
+        <button style="font-size: 18px" id="guitar">Guitars</button>
+        <button style="font-size: 18px" id="drum">Drums</button>
+        <button style="font-size: 18px" id="organs">Pianos</button>
+    </div>
+
+    <!-- current items in display -->
+
+    <div class="content">
+
+        <div class="product">
+            <img src="guitar01.jpg" height="234" width="234" alt="image1" id="image1" style="border-radius: 10px"/>
+            <div class="description">
+                <p id="desc1"> Gibson</p>
+                <div class="price" id="price1">$500</div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="guitar.jpg" height="234" width="234" alt="image2" id="image2" style="border-radius: 10px"/>
+            <div class="description">
+                <p id="desc2"> Yamaha</p>
+                <div class="price" id="price2">$350</div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="guitar03.jpg" height="234" width="234" alt="image3" id="image3" style="border-radius: 10px"/>
+            <div class="description">
+                <p id="desc3"> Washburn</p>
+                <div class="price" id="price3">$900</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- order details -->
+
+<div style="width: 20%; float: right">
+    <div class="labelOrder">
+        <span>Quantity : <span id="quantity">0</span></span>
+        <input id="add" type="image" src="add.jpg" width="17px" height="17px" title="add item">
+        <input id="minus" type="image" src="minus.jpg" width="17px" height="17px" title="x item">
+        <br>
+        <input id="cart" type="image" src="cart.png" width="150px" height="50px">
+
+        <div id="orderDescription"></div>
+        <div class="product" id="order">
+        </div>
+    </div>
+</div>
+
+    <!-- cart items -->
+
+    <form class="formStyle">
+        <span style="padding-left: 80px; font-size: 40px">Finalize your order...</span>
+        <br><br><br><br><br><br><br>
+        <div class="contentFinal">
+
+            <div class="product">
+                <img src="cartIcon.png" height="234" width="234" alt="image1" id="image1Final" style="border-radius: 10px"/>
+
+            </div>
+            <div class="product">
+                <img src="cartIcon.png" height="234" width="234" alt="image2" id="image2Final" style="border-radius: 10px"/>
+
+            </div>
+            <div class="product">
+                <img src="cartIcon.png" height="234" width="234" alt="image3" id="image3Final" style="border-radius: 10px"/>
+
+            </div>
+
+        </div>
+
+        <!-- customer form -->
+
+        <div class="form" style="padding-top: 450px">
+            <label for="name">Name as appears in your card ::</label>
+
+            <input type="text" id="name" placeholder="Your name..">
+
+            <label for="number">Contact Number ::</label>
+            <br>
+            <input type="text" id="number" placeholder="077xxxxxxx">
+            <br>
+            <label>Address ::</label>
+            <br>
+            <input type="text" id="address" placeholder="wellawatte, colombo, Sri Lanka">
+            <span>Select your payment method ::</span>
+            <br><br>
+            <input type="radio" name="pay">VISA<br>
+            <input type="radio" name="pay">MasterCard<br>
+            <input type="radio" name="pay">American Express<br>
+            <br><br>
+
+            <input type="button" value="Place Order" id="submit" class="submit">
+            <input type="button" value="Reset Order" id="reset" class="reset" onClick="window.location.reload();">
+
+        </div>
+
+
+
+    </form>
+</div>
+<a href ="#top"><button class="top">Top</button></a>
+</div>
+
+<footer id="footer" style="color:white; text-align:center">
+        Copyrights &copy; | 2019 | All rights reserved to CASSANDRA
+   </footer> 
+
+<script>
+    var totalPrices=0;
+    var productPrice = 0;
+    var prices=[500, 350, 900, 680, 800, 1000, 1450, 1200, 1600];
+    var quantity = 1;
+    var remaining = 3;
+
+    document.getElementById("order").innerHTML="<img src = 'order.jpg' height='234' width='234' >";
+
+    document.getElementById("image1").addEventListener("click",function()
+    {
+        document.getElementById("quantity").innerHTML="0";
+        productPrice = prices[0];
+        totalPrices="$500";
+        document.getElementById("order").innerHTML="<img src = 'guitar01.jpg' id='x' height='234' width='234' >" +
+            "<div class=\"description\" id='clear'>\n" +
+            "<p id='text'>Gibson</p>\n" +
+            "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+            "</div>";
+    });
+
+    document.getElementById("image2").addEventListener("click",function()
+    {
+        document.getElementById("quantity").innerHTML="0";
+        productPrice = prices[1];
+        totalPrices="$350";
+        document.getElementById("order").innerHTML="<img src = 'guitar.jpg' id='x' height='234' width='234' >" +
+            "<div class=\"description\" id='clear'>\n" +
+            "<p id='text'>Yamaha</p>\n" +
+            "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+            "</div>";
+    });
+
+    document.getElementById("image3").addEventListener("click",function()
+    {
+        document.getElementById("quantity").innerHTML="0";
+        productPrice = prices[2];
+        totalPrices="$900";
+        document.getElementById("order").innerHTML="<img src = 'guitar03.jpg' id='x' height='234' width='234' >" +
+            "<div class=\"description\" id='clear'>\n" +
+            "<p id='text'>Washburn Guitars</p>\n" +
+            "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+            "</div>";
+    });
+
+    document.getElementById("guitar").addEventListener("click",function () {
+
+        document.getElementById("image1").src = "guitar01.jpg";
+        document.getElementById("image2").src = "guitar.jpg";
+        document.getElementById("image3").src = "guitar03.jpg";
+        document.getElementById("desc1").innerHTML="Gibson";
+        document.getElementById("desc2").innerHTML="Yamaha";
+        document.getElementById("desc3").innerHTML="Washburn";
+        document.getElementById("price1").innerHTML="$500";
+        document.getElementById("price2").innerHTML="$350";
+        document.getElementById("price3").innerHTML="$900";
+
+        document.getElementById("image1").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[0];
+            totalPrices="$500";
+            document.getElementById("order").innerHTML="<img src = 'guitar01.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p id='text'>Gibson</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+
+        document.getElementById("image2").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[1];
+            totalPrices="$350";
+            document.getElementById("order").innerHTML="<img src = 'guitar.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p id='text'>Yamaha</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+
+        document.getElementById("image3").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[2];
+            totalPrices="$900";
+            document.getElementById("order").innerHTML="<img src = 'guitar03.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p id='text'>Washburn Guitars</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+    });
+
+    document.getElementById("drum").addEventListener("click",function () {
+        document.getElementById("image1").src = "drum1.jpg";
+        document.getElementById("image2").src = "drum2.jpg";
+        document.getElementById("image3").src = "drum3.jpg";
+        document.getElementById("desc1").innerHTML="Gammon";
+        document.getElementById("desc2").innerHTML="Rogue";
+        document.getElementById("desc3").innerHTML="Yamaha";
+        document.getElementById("price1").innerHTML="$680";
+        document.getElementById("price2").innerHTML="$800";
+        document.getElementById("price3").innerHTML="$1000";
+
+        document.getElementById("image1").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[3];
+            totalPrices="$580";
+            document.getElementById("order").innerHTML="<img src = 'drum1.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p>Gammon</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+
+        document.getElementById("image2").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[4];
+            totalPrices="$800";
+            document.getElementById("order").innerHTML="<img src = 'drum2.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p>Rogue</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+
+        document.getElementById("image3").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[5];
+            totalPrices="$1000";
+            document.getElementById("order").innerHTML="<img src = 'drum3.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p>Yamaha</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+    });
+
+    document.getElementById("organs").addEventListener("click",function () {
+        document.getElementById("image1").src = "piano1.jpg";
+        document.getElementById("image2").src = "piano2.jpg";
+        document.getElementById("image3").src = "piano3.png";
+        document.getElementById("desc1").innerHTML="Bösendorfer";
+        document.getElementById("desc2").innerHTML="Blüthner";
+        document.getElementById("desc3").innerHTML="Steinway & Sons";
+        document.getElementById("price1").innerHTML="$1450";
+        document.getElementById("price2").innerHTML="$1200";
+        document.getElementById("price3").innerHTML="$1600";
+
+        document.getElementById("image1").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[6];
+            totalPrices="$1450";
+            document.getElementById("order").innerHTML="<img src = 'piano1.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p>Bösendorfer</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+
+        document.getElementById("image2").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[7];
+            totalPrices="$1200";
+            document.getElementById("order").innerHTML="<img src = 'piano2.jpg' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p>Blüthner</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+
+        document.getElementById("image3").addEventListener("click",function()
+        {
+            document.getElementById("quantity").innerHTML="0";
+            productPrice = prices[8];
+            totalPrices="$1600";
+            document.getElementById("order").innerHTML="<img src = 'piano3.png' id='x' height='234' width='234' >" +
+                "<div class=\"description\" id='clear'>\n" +
+                "<p>Steinway and Sons</p>\n" +
+                "<div class=\"price\" id='x1'>"+totalPrices+"</div>\n" +
+                "</div>";
+        });
+    });
+
+    //increase the quantity
+
+    document.getElementById("add").addEventListener("click",function () {
+
+        if (quantity >= remaining){
+            alert("Dear customer, only 3 products are allowed at a time.");
+        }else {
+            document.getElementById("quantity").innerHTML= ++quantity;
+            totalPrices = productPrice*quantity;
+            document.getElementById("x1").innerHTML ="$" + totalPrices;
+        }
+
+    });
+
+    //decreases the quantity
+
+    document.getElementById("minus").addEventListener("click",function () {
+        if (quantity < 1){
+            alert("Please enter a valid quantity");
+        }else {
+            document.getElementById("quantity").innerHTML= --quantity;
+            totalPrices = productPrice*quantity;
+            document.getElementById("x1").innerHTML = "$" + totalPrices;
+        }
+    });
+
+    //add to cart button
+
+    var cartArray = [];
+    var quantityArray = [];
+    var itemNameArray = [];
+    var itemPriceArray = [];
+
+    document.getElementById("cart").addEventListener("click", function () {
+        remaining = remaining - quantity;
+        quantityArray.push(quantity);
+        itemNameArray.push(document.getElementsByTagName('p')[3].innerHTML);
+        itemPriceArray.push(totalPrices);
+        while (quantity > 0){
+            cartArray.push(document.getElementById("x").src);
+            --quantity;
+        }
+        document.getElementById("image1Final").src = cartArray[0];
+        document.getElementById("image2Final").src = cartArray[1];
+        document.getElementById("image3Final").src = cartArray[2];
+
+    });
+
+    //submit button
+
+    var finalTotal = 0;
+    document.getElementById("submit").addEventListener("click",function () {
+        var name = document.getElementById("name").value;
+
+        if (document.getElementById("name").value ==="") {
+            alert("Dear customer, You forgot to enter your name it seems")
+        } else if (document.getElementById("number").value ==="") {
+            alert("Dear customer, You forgot to add the contact number it seems")
+
+        } else if (itemNameArray.length === 0){
+            alert("Dear customer, please add items into cart.")
+        } else {
+            for (var i = 0; i < itemPriceArray.length; i++){
+                finalTotal = parseInt(finalTotal + itemPriceArray[i])
+            }
+            alert("Dear "+name+", you have selected "+itemNameArray+" and "+quantityArray+" number of quantities from each respectively. Your total bill is valued at $"+finalTotal)
+        }
+
+    })
+
+
+</script>
+<footer id="footer" style="color:white; text-align:center">
+                    Copyrights &copy; | 2019 | All rights reserved to CASSANDRA<br><a href="#">Page Done By:Nujithra Wickramasurendra</a>
+               </footer> 
+</body>
+</html>

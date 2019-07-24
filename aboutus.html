@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>About US</title>
+<meta name="viewport" content="width-device-width,intial-scale=1.0">
+<meta name="description" content="Cassandra">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script src="sidenav.js"></script>
+<style>
+
+body{
+background-image:url(bg2.jpg);
+}
+.wraper{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-gap: 15px;
+	padding-left:20px;
+	padding-right:20px;
+	
+}
+
+#heading{
+	text-align:center;
+	color:white;
+	
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width:285px;
+  background-color:rgba(255, 255, 255, 0.603);
+}
+
+.title {
+  color: grey;
+}
+
+.image{
+	height:350px;
+	width:100%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 285px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#heading{
+	text-align:center;
+}
+
+.wraper2{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 30px;
+	border:solid;
+	margin-top:20px;
+	padding:30px;
+	padding-right:60px;
+	margin-left:20px;
+	margin-right:14px;
+	background-color:white;
+	
+}
+
+
+h1{
+	text-align:center;
+}
+.wraper2 h1{
+  color:black
+}
+button{
+  background-color:black;
+  color:white;
+  border:2px solid grey;
+  border-radius:10px;
+  width:40%;
+  padding:10px;
+}
+.flip-card-back h1{
+  font-size:28px;
+}
+button:hover{
+  background-color: rgba(0, 0, 0, 0.644);
+  border:2px solid white
+  
+}
+
+a{
+	color:white;
+	text-decoration:none;
+}
+</style>
+<script src="changeFontSize.js" type="text/javascript"></script>
+</head>
+<body id="size">
+    <div id = "sideNav" class = "sidenav">
+                
+        <a style="text-align: center" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+        <div class="nav-items">
+                <a class="list" href="index.html" >Home</a>
+                <a class="list" href="gallery.html" >Gallery</a>
+                <a class="list" href="products.html" >Purchases</a>
+                <a class="list" href="Home.html" >Quiz</a>
+                <a class="list" href="aboutus.html" >About</a>
+                <a class="list" href="sitemap.html" >Site Map</a> 
+                <a class="list" href="feedback.html" >Feedback</a>
+        <img class="social" src="facebook.png">
+        <img class="social" src="instagram.png">
+        <img class="social" src="twitter.png">
+        <img class="social" src="snapchat.png">
+        </div>
+    </div>
+    
+            
+    <header id="header">
+            
+        <div id="header-items">
+                <span class="menu-icon" style="cursor:pointer" onclick="openNav()">
+                        <div class="menu-bar" id="1"></div>
+                        <div class="menu-bar" id="2"></div>
+                        <div class="menu-bar" id="3"></div> 
+                    </span>   
+        <img class="logo" src="logo2.jpg">
+            
+           
+        </div>
+    </header>
+
+    
+    <div id = "main">
+        <br><br>
+        <div>
+            <input type="image" src="increase.png" onclick="changeFontSize('size', 1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-in" title="Increase font size">
+            <input type="image" src="default.png" onclick="setDefault('size')" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; border: 1px #333333 solid;" title="set default font size">
+            <input type="image" src="decrease.png" onclick="changeFontSize('size', -1)" width="25" height="25" style="background-color: white; border-radius: 5px; float: right; margin: 0px 5px 0 5px; border: 1px #333333 solid; cursor: zoom-out" title="Decrease font size">
+        </div>
+<div class="background"></div>
+
+<div id="heading">
+<h1>WHO WE ARE</h1>
+</div>
+ 
+<div class="wraper">
+
+<div class="card">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img class="image" src="dimithra.jpg" alt="Dimithra">
+</div>
+<div class="flip-card-back">
+    <h1>Dimithra Nimnaka</h1> 
+    <p>Student 3</p> 
+    </div>
+	</div>
+	</div>
+<h2>Chief Executive Officer</h2>
+    <p class="title"></p>
+    <p>dimithra.2018@iit.ac.lk</p>
+    <p><button class="button">Contact</button></p>
+</div>
+
+<div class="card">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img class="image" src="pp.jpeg" alt="Nujitha">
+</div>
+<div class="flip-card-back">
+    <h1>Nujitha Wickramasurendra</h1> 
+    <p>Student 1</p> 
+    </div>
+</div>
+</div>
+    <h2>Chief Financial Officer</h2>
+    <p class="title"></p>
+    
+    <p>nujitha.2018516@iit.ac.lk</p>
+    <p><button class="button">Contact</button></p>
+</div>
+
+<div class="card">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img class="image" src="Akshaan.jpg" alt="Akshaan" >
+</div>
+<div class="flip-card-back">
+    <h1>Akshaan Bandara</h1> 
+    <p>Student 4</p> 
+    </div>
+	</div>
+	</div>
+   <h2>Marketing manager</h2>
+    <p class="title"></p>
+    
+    <p>akshan.2018597@iit.ac.lk</p>
+    <p><button class="button">Contact</button></p>
+</div>
+
+
+
+
+<div class="card">
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img class="image" src="hiruni.jpg" alt="Hiruni" >
+</div>
+<div class="flip-card-back">
+    <h1>Hiruni Perera</h1> 
+    <p>Student 2</p> 
+    </div>
+	</div>
+	</div>
+    <h2>HR Manager</h2>
+    <p class="title"></p>
+    
+    <p>hiruni.2018500@iit.ac.lk</p>
+    <p><button class="button">Contact</button></p>
+</div>
+
+</div>
+
+
+
+<div class="wraper2">
+<div>
+<h1>Our Vision</h1>
+<p>
+Our vision is to see the music world through the Instrumental trends which we create. We don't follow the trends, we create them. We don't fear change, we embrace it. We define the future of the music instruments by bringing them closer to you. This is a never ending task.
+<p align="center">***</p>
+</p>
+</div>
+
+<div>
+<h1>Our Mission</h1>
+<p>
+Our mission is to follow the step by step path to get closer to the customers and the music family and be their no.1 outlet for the music instruments selling industry. Giving the No.1.
+<p align="center">***</p>
+</p>
+</div>
+
+<div>
+<h1>Our Partners</h1>
+<p>We have partnered up with the world's best music instrument brands to give you the best and feel the music close to you. Yamaha, Kawai, Gibson and LP are our partners who  you will receive the best from for you.
+
+<p align="center">***</p>
+</p>
+</div>
+
+<div>
+<h1>Our Promise</h1>
+<p>
+We promise to deliver the best to our customers and treat them with great pleasure for all their interests regarding instruments. We will show the brands for them to choose what is best for them and to build their bons with it.
+<p align="center">***</p>
+</p>
+</div>
+
+</div>
+</div>
+<footer id="footer" style="color:white; text-align:center">
+                    Copyrights &copy; | 2019 | All rights reserved to CASSANDRA<br><a href="#">Page Done By:Dimithra Bandara</a>
+               </footer> 
+
+</body>
+</html>

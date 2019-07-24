@@ -1,0 +1,99 @@
+
+
+.container{                                
+	height: 400px;
+	width: 80%px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border: 1px solid #08038C;
+    box-shadow:0 0 8px 3px #fff; 
+    margin: auto;
+	
+}       /*box which displays the questions*/
+
+.title{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	color: #08038C;
+}  /*MUSIC QUIZ title name*/
+
+.question{
+	padding: 20px;
+	font-size: 22px;
+	background: #08038C;
+	border-radius: 20px;
+	margin: 10px 0 10px 0;
+	color: #f6f6f6;
+} /*display the question */
+
+.option{
+	width: 470px;
+	display: inline-block;
+	padding: 10px 0 10px 15px;
+	vertical-align: middle;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 10px 0 10px 10px;
+	color: #000000;
+	border-radius: 20px;
+} /*question box styling*/
+
+.option:hover{
+	background: #08038C;
+	color: #f6f6f6;
+} /*question box hover color when move the cursor*/
+
+.next-btn{
+	border: none;
+	outline: none;
+	background: rgba(255, 25, 255, 0.5);
+	width: 100px;
+	height: 35px;
+	border-radius: 20px;
+	cursor: pointer;
+	float: right;
+	margin: 10px;
+} /*next question button*/
+
+.next-btn:hover{
+	background: #08038C;
+	color: #f6f6f6;	
+} /*next question button color when move the cursor*/
+
+.result{
+	height: 80px;    
+	text-align: center;
+	font-size: 55px;
+}  /*result box after completing the quiz*/
+   /*height was 100px*/
+   /*font size  was 75px*/
+   
+.scoreboard{
+	height:200px;
+	font-size: 45px;
+	padding-top:200px;
+	text-align: center;
+} /*to display scoreboard*/
+
+.option input:checked .option{
+	background: #08038C;
+	color: #000;
+}  /*didnt find anything*/
+
+.timer {
+	position: absolute;
+	right:0;
+	color:#fff;
+	font-size:80px;
+	font-weight:600;
+	padding:10px;
+	padding-right:600px;
+}
+
+
+
