@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Piano</title>
+
+
+<style>
+body{
+	background:url(22.jpg);
+	background-size: cover; 
+}
+
+h1{
+	font-size:100px;
+	font-family: "Impact",Charcoal, sans-serif;
+	margin-left:60px;
+	color:rgb(255, 119, 51);
+	
+}
+
+.wrapper{
+	display:grid;
+	grid-gap:1em;
+	font-size:18px;
+	
+}
+
+.box1{
+	grid-column:1/2;
+}
+.box2{
+	margin-left:800px;
+}
+.box3{
+	grid-column:1/3;
+	background-color:rgb(77, 26, 0,0.6);
+	font-size:16px;
+	color:white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align:justify;
+	margin-left:60px;
+	margin-right:400px;
+}
+.box4{
+	grid-column:1/3;
+	background-color:rgb(77, 26, 0,0.6);
+	font-size:16px;
+	color:white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align:justify;
+	margin-left:60px;
+	margin-right:400px;
+}
+.box5{
+	grid-column:1/2;
+	background-color:rgb(77, 26, 0,0.6);
+	font-size:16px;
+	color:white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align:justify;
+	margin-left:60px;
+}
+.box6{
+	margin-left:800px;
+	margin-top:100px;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+
+a:visited {
+  color: white;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="box1">
+<h1>Piano</h1>
+</div>
+
+<div class="box2">
+<p>Font Size Changer</p>
+<div id="fontSizer">
+<input type="range" min="13" max="20" value="14" class="fontSizeChanger" id="fontSize">
+</div>
+</div>
+
+<div class="box3">
+<p>
+The piano is an acoustic, stringed musical instrument invented in Italy by Bartolomeo Cristofori around year 1709 in a shop of a harpsicord. Many other stringed and keyboard instruments preceded the piano and led to the development of the instrument as we know it today.
+Pianos are designed by specially trained and educated engineers called scale engineers. Scale engineers choose the materials, create the designs and specifications, and develop the interactions of the parts of the piano.
+</p>
+
+<h3>There are three primary types of pianos:</h3>
+
+<ul>
+  <li>Grand</li>
+  <li>Upright</li>
+  <li>Electronic</li>
+</ul>
+
+<p>
+These types are often resized and combined to incarnate other styles, such as the "Electric Baby Grand Piano", "Electric Upright Pianos", and "Baby Grand Piano".
+</p>
+</div>
+
+<div class="box4">
+<h2>Upright Piano</h2>
+
+<p>
+Upright piano, musical instrument in which the soundboard and plane of the strings run vertically, perpendicular to the keyboard, thus taking up less floor space than the normal grand piano. Upright pianos are made in various heights; the shortest are called spinets or consoles, and these are generally considered to have an inferior tone resulting from the shortness of their strings and their relatively small soundboards. The larger upright pianos were quite popular in the later 19th and early 20th centuries. The action (hammer and damper mechanism) of the upright differs from the grand-piano action mainly in that upright action is returned to a resting position by means of springs rather than by gravity alone, as in a grand. This, in part, accounts for the characteristic “touch” of uprights, which is distinct from that of grands. The chief advantages of upright pianos lie in their modest price and compactness; they are instruments for the home and school, not for the concert stage.
+Standard width of an Upright piano is about 5’ and the depth is between 2-2 ½. The total floor space allowance should be about 5’ deep, including the bench space.
+</p>
+</div>
+
+<div class="box5">
+<h2>Best piano brands</h2>
+<ul>
+	<li>Steinway & Sons</li>
+	<li>Yamaha</li>
+	<li>Fazioli</li>
+	<li>Bosendorfer</li>
+	<li>Mason and Hamlin</li>
+	<li>Brodmann</li>
+</ul>
+</div>
+
+<div class="box6">
+<button onclick="topFunction()" id="myButton" title="Go to top"><img src="btn.jpg" height="50px"></button>
+<button id="myButton" title="Home" onclick="window.location.href = '../ABOUT_US/aboutus.html';"><img src="home.jpg" width="73px" height="50px"></button>
+</div>
+
+
+
+</div>
+
+<script>
+
+//font size scaler
+var span = document.body;
+        var pSize = document.getElementsByTagName('p');
+        var spanSize = document.getElementsByTagName('span');
+        var divSize = document.getElementsByTagName('div');
+        document.getElementById("fontSize").oninput = function() {
+            span.style.fontSize = this.value + "px";
+
+
+            Array.from(pSize).forEach(p => {
+                p.style.fontSize = this.value + "px";
+            });
+            Array.from(divSize).forEach(p => {
+                p.style.fontSize = this.value + "px";
+            });
+            Array.from(spanSize).forEach(p => {
+                p.style.fontSize = this.value + "px";
+            });
+
+        }
+		
+		
+// scroll up button
+function topFunction() {
+  document.body.scrollTop = 0;            // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}		
+</script>
+
+<footer id="footer" style="text-align:center">
+    <a href="cv_dimithra.html">Page Done By: Dimithra Bandara</a>
+</footer>
+
+</body>
+</html>
